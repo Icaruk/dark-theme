@@ -6,9 +6,7 @@ var idThemeAnterior; // guardaría 1, 2 o 3
 // Funciones
 function switchTheme (idTheme) {
 	
-	console.log("switchTheme: " + idTheme);
-	
-	
+	// Obtengo referencia del botón
 	const idBoton = "b" + idTheme; // formo "b1", "b2"...
 	const elemento = document.getElementById(idBoton);
 	
@@ -22,9 +20,6 @@ function switchTheme (idTheme) {
 		case 3: theme = "superdark"; break;
 		default: theme = "light";
 	};
-	
-	
-	console.log(idTheme, theme);
 	
 	
 	// Lo aplico
@@ -51,12 +46,14 @@ function switchTheme (idTheme) {
 
 function changeButtonColor (idTheme, isSelected) {
 	
+	// Obtengo referencia del botón
 	const idBoton = "b" + idTheme;
 	const elemento = document.getElementById(idBoton);
 	
 	
 	if (!idTheme) {
 		console.log("idTheme no está definido!");
+		break;
 	};
 	
 	
